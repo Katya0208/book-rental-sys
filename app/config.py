@@ -1,10 +1,13 @@
-from pydantic import BaseSettings
-from pydantic_settings import BaseSettings
+# app/config.py
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     database_url: str
 
-    class Config:
-        env_file = ".env"
+    # разрешаем лишние переменные и указываем файл .env
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        extra="ignore",        # <- главное добавление
+    )
 
 settings = Settings()
