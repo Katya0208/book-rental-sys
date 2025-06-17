@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+asyncpg
+python-dotenv
+httpx
+zeep
+aioboto3
+pydantic
+pydantic-settings
