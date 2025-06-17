@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "da6cddc8-3171-4872-a139-0d60a62c4492",
+		"name": "Book-Rental API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45978461",
+		"_collection_link": "https://katya-3270756.postman.co/workspace/Book-Rental~62d928c6-a5bc-4f2f-9aa3-c0ec96f7d650/collection/45978461-da6cddc8-3171-4872-a139-0d60a62c4492?action=share&source=collection_link&creator=45978461"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Films (search)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/films?q=ACADEMY",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"films"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ACADEMY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
